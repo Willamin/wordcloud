@@ -1,0 +1,31 @@
+<style>
+  body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  main {
+    font-family: Helvetica;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 50em;
+  }
+  div {
+    margin: 1em;
+  }
+</style>
+
+<body>
+  <main>
+  <% words.each do |word| %>
+    <div style="order: <%= Random.rand(100) %>;font-size: <%= word.size * 6.0 / 100 %>em">
+      <%= word.word %>
+    </div>
+  <% end %>
+  </main>
+</body>
